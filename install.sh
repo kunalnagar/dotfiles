@@ -4,8 +4,6 @@ DIR_HOME=$HOME
 DIR_DOTFILES=$DIR_HOME/Code/Personal/dotfiles
 DIR_DOTFILES_CONFIG=$DIR_DOTFILES/config
 
-xcode-select --install
-
 # Setup bash_profile
 #
 #   1. Download git-completion.bash and move it to ~/

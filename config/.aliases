@@ -9,18 +9,9 @@ alias .....="cd ../../../.."
 # Shortcuts for commonly used directories
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias dkapi="cd ~/Code/HomeX/knowledge-api"
-alias dkapit="cd ~/Code/HomeX/knowledge-types"
 
 # Listing
 alias l="ls -lAF -G"
 
 # Show local ip
-alias localip="ipconfig getifaddr en0"
-
-# Show/hide hidden files
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias localip="hostname -I"

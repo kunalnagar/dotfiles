@@ -10,22 +10,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
-export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
-
-# GIT FUNCTIONS
+# Git get current branch
 git_branch() {
   git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# TERMINAL PROMPT
+# Minimal prompt
 PS1="\[\033[01;32m\]\w"   				                  # current directory
 PS1+=" "
-PS1+="\[\[\033[01;34m\]\e\$(git_branch)\[\e[m\]"   	# current git branch
+PS1+="\[\[\033[01;34m\]\e\ $(git_branch)\[\e[m\]"   	# current git branch
 PS1+="\n"
-PS1+="~ "
-
+PS1+="=> "
 export PS1;
