@@ -1,3 +1,3 @@
 ## ./files
 
-Ubuntu 16.04 LTS (Unity)
+Ubuntu 18.04 LTS
