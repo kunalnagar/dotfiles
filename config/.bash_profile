@@ -13,8 +13,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # auto-completion
-if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
-  . /opt/local/etc/profile.d/bash_completion.sh
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
 fi
 
 ip_local() {
