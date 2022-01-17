@@ -1,6 +1,6 @@
 # Bitwarden Backup
 
-This essentially backs up the Config and the DB creating two files:
+This essentially backs up the Config:
 
 - config.tgz
 
