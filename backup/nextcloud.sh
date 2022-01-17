@@ -1,14 +1,13 @@
 #!/bin/bash
 
-today=$(date +"%Y_%m_%d")
-filename=$today"_Nextcloud_backup"
-filename_db=$tody"_Nextcloud_sql.bak"
+# today=$(date +"%Y_%m_%d")
+config_path="/srv/dev-disk-by-label-Storage1/Config/nextcloud/"
+config_backup_path="/srv/dev-disk-by-label-Storage1/Backups/duplicati/nextcloud/config.tgz"
+db_path="/srv/dev-disk-by-label-Storage1/Databases/nextcloud"
+db_backup_path="/srv/dev-disk-by-label-Storage1/Backups/duplicati/nextcloud/db.tgz"
 
-sudo -u www-data php /var/www/html/nextcloud/occ maintenance:mode --on
+# DB Backup
+sudo tar -cvjf ${db_backup_path} -C ${db_path} .
 
-sudo su
-rsync -Aavx /var/www/html/nextcloud/ /home/media/pi/Nextcloud/Backups/${filename}
-zip ${filename}
-rm -rf ${filename}
-
-mysqldump --single-transaction -h ${NEXTCLOUD_SERVER} -u ${NEXTCLOUD_DB_USER} -p${NEXTCLOUD_DB_PASSWORD} ${NEXTCLOUD_DB} > ${filename_db}
+# Config Backup
+sudo tar -cvjf ${config_backup_path} -C ${config_path} .
