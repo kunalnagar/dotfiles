@@ -11,3 +11,6 @@ sudo tar -cvjf ${db_backup_path} -C ${db_path} .
 
 # Config Backup
 sudo tar -cvjf ${config_backup_path} -C ${config_path} .
+
+# Send email
+echo -e "Subject: raspberrypi - Backup - Nextcloud DONE\r\n\r\nThe backup was successful" | msmtp --from=default -t knlnagar@gmail.com
