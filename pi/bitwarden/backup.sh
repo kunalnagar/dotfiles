@@ -5,7 +5,7 @@ config_path="/srv/dev-disk-by-label-Storage1/Config/bitwarden/"
 config_backup_path="/srv/dev-disk-by-label-Storage1/Backups/duplicati/bitwarden/config.tgz"
 
 # Bitwarden backup
-sudo tar -cvjf ${db_backup_path} -C ${db_path} .
+sudo tar -cvjf ${config_backup_path} -C ${config_path} .
 
 end_time=$(date +%s)
 elapsed=$(( end_time - start_time ))
