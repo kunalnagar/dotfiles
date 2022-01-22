@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -euo pipefail
-
 DIR_HOME=$HOME
 DIR_DOTFILES=$DIR_HOME/.dotfiles
 
