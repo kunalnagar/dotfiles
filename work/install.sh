@@ -49,6 +49,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install --lts
 
 # Symlink the .ssh config
+mkdir $DIR_HOME/.ssh
 ln -s $DIR_DOTFILES/config/ssh/config $DIR_HOME/.ssh
 # DEBUG
 cat ~/.ssh/config

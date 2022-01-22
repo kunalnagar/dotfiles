@@ -22,6 +22,7 @@ Here's a list of things that get installed:
 - Homebrew
 - nvm and node LTS
 - Git bash completion script
+- Custom `.ssh/config` in case there are multiple hosts
 - Custom `.bash_profile`
 - Custom `.gitconfig`
 - Symlink Profile picture to use in ~/Pictures
