@@ -1,9 +1,9 @@
 #!/bin/bash
 
-DIR_HOME=$HOME
-DIR_DOTFILES=$DIR_HOME/.dotfiles
-DIR_IMAGES=$DIR_DOTFILES/images
-DIR_PI=$DIR_DOTFILES/pi
-DIR_WORK=$DIR_DOTFILES/work
+export DIR_HOME=$HOME
+export DIR_DOTFILES=$DIR_HOME/.dotfiles
+export DIR_IMAGES=$DIR_DOTFILES/images
+export DIR_PI=$DIR_DOTFILES/pi
+export DIR_WORK=$DIR_DOTFILES/work
 
 sh $DIR_WORK/install.sh
