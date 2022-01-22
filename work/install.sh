@@ -62,7 +62,6 @@ cat ~/.bash_profile
 # Remove the generated .gitconfig, symlink ours and reload it
 rm -rf ~/.gitconfig
 ln -s $DIR_DOTFILES/config/.gitconfig $DIR_HOME
-source $DIR_HOME/.gitconfig
 # DEBUG
 cat ~/.gitconfig
 
