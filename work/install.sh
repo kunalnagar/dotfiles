@@ -44,14 +44,16 @@ brew install bash
 sudo bash -c "echo /usr/local/bin/bash >> /etc/shells"
 chsh -s /usr/local/bin/bash
 
-## Install nvm and latest node LTS
+# Remove .bashrc
+rm -rf ~/.bashrc
+
+## Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-nvm install --lts
 
 # Symlink the .ssh config
-mkdir $DIR_HOME/.ssh
 ln -s $DIR_DOTFILES/config/ssh/config $DIR_HOME/.ssh
 # DEBUG
+ls -al $DIR_HOME/.ssh
 cat ~/.ssh/config
 
 # Git bash completion
@@ -59,6 +61,7 @@ curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-
 mv git-completion.bash ~/.git-completion.bash
 
 # Remove the generated .bash_profile, symlink ours and reload it
+rm -rf ~/.bashrc
 rm -rf ~/.bash_profile
 ln -s $DIR_DOTFILES/config/.bash_profile $DIR_HOME
 source $DIR_HOME/.bash_profile
@@ -70,6 +73,9 @@ rm -rf ~/.gitconfig
 ln -s $DIR_DOTFILES/config/.gitconfig $DIR_HOME
 # DEBUG
 cat ~/.gitconfig
+
+# Install node LTS
+nvm install --lts
 
 # Symlink profile picture
 ln -s $DIR_DOTFILES/work/me.jpg ~/Pictures
