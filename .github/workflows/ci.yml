@@ -11,11 +11,11 @@ jobs:
   build:
     runs-on: macOS-11
     steps:
-      - run: |
-          echo $HOME
-          echo $GITHUB_WORKSPACE
       - uses: actions/checkout@v2
+      - run: |
+          mkdir $HOME/.dotfiles
+          mv * $HOME/.dotfiles
+          ls -al $HOME
       - name: Run the install
         run: |
-          pwd
-          ls -al
+          sh $HOME/.dotfiles/work/install.sh
