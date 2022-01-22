@@ -26,8 +26,10 @@ mv git-completion.bash ~/.git-completion.bash
 rm -rf ~/.bash_profile
 
 # Symlink .bash_profile and reload it
-ln -s $DIR_DOTFILES_CONFIG/.bash_profile $DIR_HOME
+ln -s $DIR_DOTFILES/config/.bash_profile $DIR_HOME
 source $DIR_HOME/.bash_profile
+# DEBUG
+cat ~/.bash_profile
 
 # Symlink profile picture
 ln -s $DIR_DOTFILES/work/me.jpg ~/Pictures
@@ -35,15 +37,21 @@ ln -s $DIR_DOTFILES/work/me.jpg ~/Pictures
 # Symlink wallpaper
 ln -s $DIR_DOTFILES/work/wallpaper.jpg ~/Pictures
 ln -s $DIR_DOTFILES/work/wallpaper-flipped.jpg ~/Pictures
+# DEBUG
+ls -al ~/Pictures
 
 # Backup current Terminal Settings + Symlink custom config
 mv ~/Library/Preferences/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist.bak
 ln -s $DIR_DOTFILES/work/com.apple.Terminal.plist ~/Library/Preferences
+# DEBUG
+cat ~/Library/Preferences/com.apple.Terminal.plist
 
-# brew install --cask bartender
-# brew install --cask rectangle
-# brew install --cask alfred
-# brew install --cask google-chrome
-# brew install --cask visual-studio-code
-# brew install --cask zoom
-# brew install --cask appcleaner
+brew install --cask bartender
+brew install --cask rectangle
+brew install --cask alfred
+brew install --cask google-chrome
+brew install --cask visual-studio-code
+brew install --cask zoom
+brew install --cask appcleaner
+
+ls -al $DIR_HOME
