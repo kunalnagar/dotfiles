@@ -1,18 +1,25 @@
 #!/bin/bash
 
+set -euo pipefail
+
 DIR_HOME=$HOME
 DIR_DOTFILES=$DIR_HOME/.dotfiles
 
-CURRENT_DIR=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-
 # Switch to bash
-chsh -s /bin/bash
+# chsh -s /bin/bash
 
 # XCode Tools
 xcode-select --install
 
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew analytics off
+brew update
+
+# Install latest bash and configure it
+brew install bash
+sudo bash -c "echo /usr/local/bin/bash >> /etc/shells"
+chsh -s /usr/local/bin/bash
 
 ## Install nvm and latest node LTS
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -53,5 +60,8 @@ brew install --cask google-chrome
 brew install --cask visual-studio-code
 brew install --cask zoom
 brew install --cask appcleaner
+
+# Cleanup
+brew cleanup
 
 ls -al $DIR_HOME
