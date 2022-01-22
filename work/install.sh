@@ -9,6 +9,12 @@ DIR_DOTFILES=$DIR_HOME/.dotfiles
 # XCode Tools
 xcode-select --install
 
+# Disable automatic updates
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -boolean FALSE
+
+# Install latest updates
+sudo softwareupdate -i -a
+
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew analytics off
@@ -48,8 +54,6 @@ ls -al ~/Pictures
 # Backup current Terminal Settings + Symlink custom config
 mv ~/Library/Preferences/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist.bak
 ln -s $DIR_DOTFILES/work/com.apple.Terminal.plist ~/Library/Preferences
-# DEBUG
-cat ~/Library/Preferences/com.apple.Terminal.plist
 
 brew install --cask bartender
 brew install --cask rectangle
