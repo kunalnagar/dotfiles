@@ -40,7 +40,19 @@ Here's a list of things that get installed:
 - AppCleaner (Freemacsoft)
 - Docker (open Docker for Desktop manually and go through the rest of the setup)
 
-### Setup Google Chrome
+## Setup GitHub
+
+- Generate a new SSH key using:
+  ```
+  ssh-keygen -t ed25519 -C "your_email@example.com"
+  ```
+- Copy the public key:
+  ```
+  cat ~/.ssh/id_ed25519.pub
+  ```
+- Add a [new SSH key](https://github.com/settings/keys) with the name "<company_name>" and paste the public key
+
+## Setup Google Chrome
 
 - Create a work profile called "Kunal (<company_name>)"
   - Install [uBlock origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en)
@@ -48,7 +60,7 @@ Here's a list of things that get installed:
   - Install [Zoom for GSuite](https://workspace.google.com/marketplace/app/zoom_for_g_suite/364750910244)
   - Set Gmail, Calendar, Spotify as pinned tabs
 
-### Setup Gmail
+## Setup Gmail
 
 - Setup profile picture: ~/Pictures/me.jpg
 - Import the following filters: GitHub
@@ -85,7 +97,7 @@ Here's a list of things that get installed:
   - Start week on Monday
   - Working hours: 9:30am - 5:30pm EST
 
-### Setup Zoom
+## Setup Zoom
 
 For the different Setting tabs, the ones listed should be checked, rest all are unchecked. Also, take a look at the web settings.
 

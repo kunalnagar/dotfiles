@@ -48,6 +48,11 @@ chsh -s /usr/local/bin/bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install --lts
 
+# Symlink the .ssh config
+ln -s $DIR_DOTFILES/config/ssh/config $DIR_HOME/.ssh
+# DEBUG
+cat ~/.ssh/config
+
 # Git bash completion
 curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 mv git-completion.bash ~/.git-completion.bash
