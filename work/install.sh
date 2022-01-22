@@ -28,11 +28,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 killAll cfprefsd
 killAll Finder
 
-# Set a really fast key repeat
-defaults write NSGlobalDomain KeyRepeat -int 1
-
-# XCode Tools
-xcode-select --install
+# Set a fast key repeat
+defaults write NSGlobalDomain KeyRepeat -int 2
 
 # Disable automatic updates
 defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool false
@@ -77,6 +74,7 @@ ls -al ~/Pictures
 mv ~/Library/Preferences/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist.bak
 ln -s $DIR_DOTFILES/work/com.apple.Terminal.plist ~/Library/Preferences
 
+# Apps
 brew install --cask bartender
 brew install --cask rectangle
 brew install --cask alfred
@@ -84,6 +82,13 @@ brew install --cask google-chrome
 brew install --cask visual-studio-code
 brew install --cask zoom
 brew install --cask appcleaner
+
+# Install Docker and test
+brew install --cask docker
+sleep 20s
+docker -v
+docker-compose -v
+docker run hello-world
 
 # Cleanup
 brew cleanup

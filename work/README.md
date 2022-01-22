@@ -4,26 +4,28 @@ Thumb rule: No personal data / logins on a work laptop
 
 Here are some things I do to keep my experience on my work laptop consistent:
 
-1. Rename the machine to "Kunal_Work" and assign an IP of 192.168.0.10
-2. Turn off automatic updates
-3. Check for updates manually. Install all updates except upgrading the OS.
-4. Clone the dotfiles repo and run the work installer script
+1. Rename the machine to `Kunal_Work` and assign an IP of `192.168.0.10`
+2. Clone the dotfiles repo and run the work installer script
+   ```
+   xcode-select --install
+   git clone https://github.com/kunalnagar/dotfiles.git ~/.dotfiles
+   ```
 
 ## What's included
 
 Here's a list of things that get installed:
 
-1. Change default shell to bash
-2. Install XCode latest tools
-3. Homebrew
-4. nvm and node LTS
-5. Git bash completion script
-6. Custom `.bash_profile`
-7. Profile picture to use, copied to `~/Pictures`
-   - Set on Slack, GSuite and other apps
-8. Symlink Wallpaper and flipped version for dual monitor sync
-   - Update Wallpaper on both monitors
-9. Symlink Terminal Settings
+- Install latest updates
+- Set Finder defaults
+- Set fast key repeat
+- Disable automatic updates
+- Homebrew
+- nvm and node LTS
+- Git bash completion script
+- Custom `.bash_profile`
+- Symlink Profile picture to use in ~/Pictures
+- Symlink Wallpaper and flipped version for dual monitor sync
+- Symlink Terminal Settings
 
 ### Apps (usually installed via Homebrew)
 
@@ -35,16 +37,15 @@ Here's a list of things that get installed:
 5. Visual Studio Code
 6. Zoom (optional)
 7. AppCleaner (Freemacsoft)
+8. Docker
 
 ### Setup Google Chrome
 
-- Airdrop required passwords
 - Create a work profile called "Kunal (<company_name>)"
   - Install [uBlock origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en)
   - Install [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
   - Install [Zoom for GSuite](https://workspace.google.com/marketplace/app/zoom_for_g_suite/364750910244)
   - Set Gmail, Calendar, Spotify as pinned tabs
-- asdasdas
 
 ### Setup Gmail
 
