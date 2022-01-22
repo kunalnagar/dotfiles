@@ -52,14 +52,19 @@ nvm install --lts
 curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 mv git-completion.bash ~/.git-completion.bash
 
-# Remove the generated bash_profile
+# Remove the generated .bash_profile, symlink ours and reload it
 rm -rf ~/.bash_profile
-
-# Symlink .bash_profile and reload it
 ln -s $DIR_DOTFILES/config/.bash_profile $DIR_HOME
 source $DIR_HOME/.bash_profile
 # DEBUG
 cat ~/.bash_profile
+
+# Remove the generated .gitconfig, symlink ours and reload it
+rm -rf ~/.gitconfig
+ln -s $DIR_DOTFILES/config/.gitconfig $DIR_HOME
+source $DIR_HOME/.gitconfig
+# DEBUG
+cat ~/.gitconfig
 
 # Symlink profile picture
 ln -s $DIR_DOTFILES/work/me.jpg ~/Pictures
@@ -82,15 +87,10 @@ brew install --cask google-chrome
 brew install --cask visual-studio-code
 brew install --cask zoom
 brew install --cask appcleaner
-
-# Install Docker and test
 brew install --cask docker
-sleep 20s
-docker -v
-docker-compose -v
-docker run hello-world
 
 # Cleanup
 brew cleanup
 
+# List home directory
 ls -al $DIR_HOME

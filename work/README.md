@@ -4,12 +4,12 @@ Thumb rule: No personal data / logins on a work laptop
 
 Here are some things I do to keep my experience on my work laptop consistent:
 
-1. Rename the machine to `Kunal_Work` and assign an IP of `192.168.0.10`
-2. Clone the dotfiles repo and run the work installer script
-   ```
-   xcode-select --install
-   git clone https://github.com/kunalnagar/dotfiles.git ~/.dotfiles
-   ```
+- Rename the machine to `Kunal_Work` and assign an IP of `192.168.0.10`
+- Clone the dotfiles repo and run the work installer script
+  ```
+  xcode-select --install
+  git clone https://github.com/kunalnagar/dotfiles.git ~/.dotfiles
+  ```
 
 ## What's included
 
@@ -23,21 +23,22 @@ Here's a list of things that get installed:
 - nvm and node LTS
 - Git bash completion script
 - Custom `.bash_profile`
+- Custom `.gitconfig`
 - Symlink Profile picture to use in ~/Pictures
 - Symlink Wallpaper and flipped version for dual monitor sync
 - Symlink Terminal Settings
 
 ### Apps (usually installed via Homebrew)
 
-1. Bartender
-2. Rectangle
-3. Alfred
-   - Update shortcut to Cmd + Shift + Space
-4. Google Chrome
-5. Visual Studio Code
-6. Zoom (optional)
-7. AppCleaner (Freemacsoft)
-8. Docker
+- Bartender
+- Rectangle
+- Alfred
+  - Update shortcut to Cmd + Shift + Space
+- Google Chrome
+- Visual Studio Code
+- Zoom (optional)
+- AppCleaner (Freemacsoft)
+- Docker (open Docker for Desktop manually and go through the rest of the setup)
 
 ### Setup Google Chrome
 
