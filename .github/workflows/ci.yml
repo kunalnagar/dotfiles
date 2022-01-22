@@ -1,0 +1,21 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - "**"
+    tags-ignore:
+      - "*.*"
+
+jobs:
+  build:
+    runs-on: macOS-11
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          mkdir $HOME/.dotfiles
+          mv * $HOME/.dotfiles
+          ls -al $HOME
+      - name: Run the install
+        run: |
+          sh $HOME/.dotfiles/work/install.sh
