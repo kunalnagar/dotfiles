@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ../../setup-variables.sh
-
 # Install latest updates
 sudo softwareupdate -i -a
 
