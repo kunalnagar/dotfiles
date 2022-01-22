@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: CI (Work)
 
 on:
   push:
@@ -18,4 +18,4 @@ jobs:
           ls -al $HOME
       - name: Run the install
         run: |
-          sh $HOME/.dotfiles/work/install.sh
+          sh $HOME/.dotfiles/install-work.sh
