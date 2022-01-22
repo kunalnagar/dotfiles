@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DIR_HOME=$HOME
+DIR_DOTFILES=$DIR_HOME/.dotfiles
+DIR_IMAGES=$DIR_DOTFILES/images
+DIR_PI=$DIR_DOTFILES/pi
+DIR_WORK=$DIR_DOTFILES/work
+
+sh $DIR_WORK/install.sh

@@ -1,8 +1,5 @@
 #!/bin/bash
 
-DIR_HOME=$HOME
-DIR_DOTFILES=$DIR_HOME/.dotfiles
-
 # Install latest updates
 sudo softwareupdate -i -a
 
@@ -72,11 +69,11 @@ cat ~/.gitconfig
 nvm install --lts
 
 # Symlink profile picture
-ln -s $DIR_DOTFILES/work/me.jpg ~/Pictures
+ln -s $DIR_IMAGES/me.jpg ~/Pictures
 
 # Symlink wallpaper
-ln -s $DIR_DOTFILES/work/wallpaper.jpg ~/Pictures
-ln -s $DIR_DOTFILES/work/wallpaper-flipped.jpg ~/Pictures
+ln -s $DIR_IMAGES/wallpaper.jpg ~/Pictures
+ln -s $DIR_IMAGES/wallpaper-flipped.jpg ~/Pictures
 # DEBUG
 ls -al ~/Pictures
 
