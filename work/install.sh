@@ -3,17 +3,39 @@
 DIR_HOME=$HOME
 DIR_DOTFILES=$DIR_HOME/.dotfiles
 
-# Switch to bash
-# chsh -s /bin/bash
+# Install latest updates
+sudo softwareupdate -i -a
+
+# Set default Finder view as Column
+defaults write com.apple.Finder FXPreferredViewStyle clmv
+
+# Set other Finder preferences
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
+# Open Desktop when opening a new Finder window
+defaults write com.apple.finder NewWindowTargetPath -string "PfDe"
+
+# Show Status Bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show Path Bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Restart Finder
+killAll cfprefsd
+killAll Finder
+
+# Set a really fast key repeat
+defaults write NSGlobalDomain KeyRepeat -int 1
 
 # XCode Tools
 xcode-select --install
 
 # Disable automatic updates
-sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -boolean FALSE
-
-# Install latest updates
-sudo softwareupdate -i -a
+defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool false
 
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
