@@ -16,9 +16,7 @@ jobs:
           mkdir $HOME/.dotfiles
           mv * $HOME/.dotfiles
           ls -al $HOME
-      - name: Setup Variables
-        run: sh $HOME/.dotfiles/setup-variables.sh
       - name: Run the install
         run: |
-
+          sh $HOME/.dotfiles/setup-variables.sh
           sh $HOME/.dotfiles/work/install.sh
