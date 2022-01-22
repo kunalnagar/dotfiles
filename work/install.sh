@@ -79,7 +79,7 @@ ls -al ~/Pictures
 
 # Backup current Terminal Settings + Symlink custom config
 mv ~/Library/Preferences/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist.bak
-ln -s $DIR_DOTFILES/work/com.apple.Terminal.plist ~/Library/Preferences
+ln -s $DIR_MACOS/com.apple.Terminal.plist ~/Library/Preferences
 
 # Apps
 brew install --cask bartender
