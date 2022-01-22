@@ -18,5 +18,4 @@ jobs:
           ls -al $HOME
       - name: Run the install
         run: |
-          source $HOME/.dotfiles/setup-variables.sh
           sh $HOME/.dotfiles/work/install.sh
