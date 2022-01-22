@@ -50,12 +50,6 @@ rm -rf ~/.bashrc
 ## Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
-# Symlink the .ssh config
-ln -s $DIR_DOTFILES/config/ssh/config $DIR_HOME/.ssh
-# DEBUG
-ls -al $DIR_HOME/.ssh
-cat ~/.ssh/config
-
 # Git bash completion
 curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 mv git-completion.bash ~/.git-completion.bash
