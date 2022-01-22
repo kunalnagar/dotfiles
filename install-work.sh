@@ -1,4 +1,4 @@
 #!/bin/bash
 
-source ./setup-variables.sh
-sh ./work/install.sh
+source $HOME/.dotfiles/setup-variables.sh
+sh $DIR_DOTFILES/work/install.sh
