@@ -77,6 +77,10 @@ ln -s $DIR_IMAGES/wallpaper-flipped.jpg ~/Pictures
 # DEBUG
 ls -al ~/Pictures
 
+# I use multiple monitors, so set the wallpapers on both desktops
+osascript -e 'tell application "System Events" to set picture of current desktop to "${DIR_HOME}/Pictures/wallpaper-flipped.jpg" as POSIX file'
+osascript -e 'tell application "System Events" to set picture of second desktop to "${DIR_HOME}/Pictures/wallpaper.jpg" as POSIX file'
+
 # Backup current Terminal Settings + Symlink custom config
 mv ~/Library/Preferences/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist.bak
 ln -s $DIR_MACOS/com.apple.Terminal.plist ~/Library/Preferences
