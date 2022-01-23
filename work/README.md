@@ -1,15 +1,27 @@
+[![CI (Work)](https://github.com/kunalnagar/dotfiles/actions/workflows/ci-work.yml/badge.svg)](https://github.com/kunalnagar/dotfiles/actions/workflows/ci-work.yml)
+
 # How I setup a new work laptop
 
-Thumb rule: No personal data / logins on a work laptop
+**Remember: No personal data / logins on a work laptop**
 
-Here are some things I do to keep my experience on my work laptop consistent:
+I've received a new work laptop. In all probability, it's going to be a Mac. I open the box, peel off the plastic and turn it on for the first time. Connect it to power as well. I assume it's alerady got some company policies set up.
 
-- Rename the machine to `Kunal_Work` and assign an IP of `192.168.0.10`
-- Clone the dotfiles repo and run the work installer script
+Take a minute to appreciate that this is as good as the machine is gonna look.
+
+- Create a new account with the username `kunalnagar` and a secure password. Log in to the account.
+- Set machine name to `Kunal-Work` (Settings > Sharing > Computer Name)
+- Connect to the 5G band network (use DHCP with manual address) and IP of `192.168.0.10`
+- Connect it to the external monitors, keyboard (1) and mouse (1), headphones, external webcam
+- Set it up in clamshell mode. Verify the display arrangement and other peripherals
+- Open the terminal and run the following:
   ```
   xcode-select --install
   git clone https://github.com/kunalnagar/dotfiles.git ~/.dotfiles
+  sh install-work.sh
   ```
+- Make some coffee and enjoy the installation!
+
+**Note:** During the process, there might be some prompts for password or file permissions. This setup does need a bit of monitoring because of how policies in macOS are set up.
 
 ## What's included
 
@@ -25,7 +37,7 @@ Here's a list of things that get installed:
 - Custom `.bash_profile`
 - Custom `.gitconfig`
 - Symlink Profile picture to use in ~/Pictures
-- Symlink Wallpaper and flipped version for dual monitor sync
+- Symlink Wallpaper and flipped version. Set wallpapers on both monitors using AppleScript
 - Symlink Terminal Settings
 
 ### Apps (usually installed via Homebrew)
@@ -39,6 +51,10 @@ Here's a list of things that get installed:
 - Zoom (optional)
 - AppCleaner (Freemacsoft)
 - Docker (open Docker for Desktop manually and go through the rest of the setup)
+
+## Next steps
+
+At this point, the dotfiles installation is complete. It's time to start customizing the individual apps.
 
 ## Setup GitHub
 
@@ -58,6 +74,7 @@ Here's a list of things that get installed:
   - Install [uBlock origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en)
   - Install [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
   - Install [Zoom for GSuite](https://workspace.google.com/marketplace/app/zoom_for_g_suite/364750910244)
+  - Install [Bitwarden](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb?hl=en). Login to the `work` profile.
   - Set Gmail, Calendar, Spotify as pinned tabs
 
 ## Setup Gmail
