@@ -4,14 +4,15 @@
 
 **Remember: No personal data / logins on a work laptop**
 
-I've received a new work laptop. In all probability, it's going to be a Mac. I open the box, peel off the plastic and turn it on for the first time. I assume it's alerady got some company policies set up.
+I've received a new work laptop. In all probability, it's going to be a Mac. I open the box, peel off the plastic and turn it on for the first time. Connect it to power as well. I assume it's alerady got some company policies set up.
 
 Take a minute to appreciate that this is as good as the machine is gonna look.
 
 - Create a new account with the username `kunalnagar` and a secure password. Log in to the account.
 - Set machine name to `Kunal-Work` (Settings > Sharing > Computer Name)
 - Connect to the 5G band network (use DHCP with manual address) and IP of `192.168.0.10`
-- Connect it to the external monitors and set it up in clamshell mode.
+- Connect it to the external monitors, keyboard (1) and mouse (1), headphones, external webcam
+- Set it up in clamshell mode. Verify the display arrangement and other peripherals
 - Open the terminal and run the following:
   ```
   xcode-select --install
@@ -51,6 +52,10 @@ Here's a list of things that get installed:
 - AppCleaner (Freemacsoft)
 - Docker (open Docker for Desktop manually and go through the rest of the setup)
 
+## Next steps
+
+At this point, the dotfiles installation is complete. It's time to start customizing the individual apps.
+
 ## Setup GitHub
 
 - Generate a new SSH key using:
@@ -69,6 +74,7 @@ Here's a list of things that get installed:
   - Install [uBlock origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en)
   - Install [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
   - Install [Zoom for GSuite](https://workspace.google.com/marketplace/app/zoom_for_g_suite/364750910244)
+  - Install [Bitwarden](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb?hl=en). Login to the `work` profile.
   - Set Gmail, Calendar, Spotify as pinned tabs
 
 ## Setup Gmail
