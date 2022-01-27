@@ -1,4 +1,4 @@
-# Bitwarden Backup
+# Duplicati Backup
 
 This essentially backs up the Config:
 
