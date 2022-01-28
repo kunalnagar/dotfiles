@@ -4,7 +4,7 @@ start_time=$(date +%s)
 config_path="/srv/dev-disk-by-label-Storage1/Config/bitwarden/"
 config_backup_path="/srv/dev-disk-by-label-Storage1/Backups/duplicati/bitwarden/config.tgz"
 
-# Bitwarden backup
+# Backup
 sudo tar -cvjf ${config_backup_path} -C ${config_path} .
 
 end_time=$(date +%s)
