@@ -12,16 +12,7 @@ if [[ $(uname) == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# if [ "$(uname)" == "Darwin" ]; then
-#   # Set PATH, MANPATH, etc., for Homebrew.
-#   eval "$(/opt/homebrew/bin/brew shellenv)"
-# elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-#   # Do something under GNU/Linux platform
-# elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
-#   # Do something under 32 bits Windows NT platform
-# elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
-#   # Do something under 64 bits Windows NT platform
-# fi
+autoload -U colors && colors
 
 setopt PROMPT_SUBST
 export PROMPT='$fg[cyan]%m:$fg[yellow] %T %B%30<..<%~%b $(parse_git_branch)
