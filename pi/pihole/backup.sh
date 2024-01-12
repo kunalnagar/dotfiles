@@ -1,11 +1,12 @@
 #!/bin/bash
 
 start_time=$(date +%s)
-config_path="/srv/dev-disk-by-label-Storage1/Config/Pihole/"
-config_backup_path="/srv/dev-disk-by-label-Storage1/Backups/duplicati/pihole/config.tgz"
+config_backup_path="/srv/dev-disk-by-label-Storage1/Config/Pihole/etc-pihole/config.tgz"
 
-# backup
-sudo tar -cvjf ${config_backup_path} -C ${config_path} .
+# Remove existing backup
+sudo docker exec pihole rm /etc/pihole/config.tgz
+# Make a new backup
+sudo docker exec pihole pihole -a -t /etc/pihole/config.tgz
 
 end_time=$(date +%s)
 elapsed=$(( end_time - start_time ))
