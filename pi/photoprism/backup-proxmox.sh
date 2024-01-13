@@ -6,7 +6,7 @@ start_time=$(date +%s)
 rm -rf /photoprism/backups/config
 rm -rf /photoprism/backups/config.tgz
 mkdir /photoprism/backups/config
-docker compose exec -T photoprism photoprism backup -i - > /photoprism/backups/config/db.sql
+cd ~/photoprism_docker && docker compose exec -T photoprism photoprism backup -i - > /photoprism/backups/config/db.sql
 tar -cvjf /photoprism/backups/config/originals.tgz /photoprism/originals
 tar -cvjf /photoprism/backups/config/storage.tgz /photoprism/storage
 tar -cvjf /photoprism/backups/config.tgz /photoprism/backups/config
