@@ -51,13 +51,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 mv git-completion.bash ~/.git-completion.bash
 
-# Remove the generated .bash_profile, symlink ours and reload it
-rm -rf ~/.bashrc
-rm -rf ~/.bash_profile
-ln -s $DIR_DOTFILES/config/.bash_profile $DIR_HOME
-source $DIR_HOME/.bash_profile
+# Switch the shell to zsh and symlink the .zshrc
+chsh -s $(which zsh)
+ln -s $DIR_DOTFILES/config/.zshrc $DIR_HOME
+source $DIR_HOME/.zshrc
 # DEBUG
-cat ~/.bash_profile
+cat ~/.zshrc
 
 # Remove the generated .gitconfig, symlink ours and reload it
 rm -rf ~/.gitconfig
