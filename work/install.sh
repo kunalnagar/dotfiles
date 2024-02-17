@@ -56,12 +56,12 @@ ls -al
 
 # Switch the shell to bash and symlink the .bashrc
 chsh -s $(which bash)
-ln -s $DIR_DOTFILES/.bashrc $DIR_HOME/.bashrc
+ln -s $DIR_DOTFILES/.bashrc $DIR_HOME
 source $DIR_HOME/.bashrc
 
 # Remove the generated .gitconfig, symlink ours and reload it
 rm -rf $DIR_HOME/.gitconfig
-ln -s $DIR_DOTFILES/.gitconfig $DIR_HOME/.gitconfig
+ln -s $DIR_DOTFILES/.gitconfig $DIR_HOME
 # DEBUG
 cat $DIR_HOME/.gitconfig
 
