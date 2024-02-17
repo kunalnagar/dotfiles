@@ -53,7 +53,7 @@ mv git-completion.bash ~/.git-completion.bash
 
 # Switch the shell to bash and symlink the .bashrc
 chsh -s $(which bash)
-ln -s $DIR_DOTFILES/.bashrc $DIR_HOME
+ln -s $DIR_DOTFILES/.bashrc $DIR_HOME/.bashrc
 source $DIR_HOME/.bashrc
 
 # Remove the generated .gitconfig, symlink ours and reload it
