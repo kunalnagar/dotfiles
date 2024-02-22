@@ -42,27 +42,28 @@ sudo bash -c "echo /usr/local/bin/bash >> /etc/shells"
 chsh -s /usr/local/bin/bash
 
 # Remove .bashrc
-rm -rf ~/.bashrc
+rm -rf $DIR_HOME/.bashrc
 
 ## Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 # Git bash completion
 curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-mv git-completion.bash ~/.git-completion.bash
+mv git-completion.bash $DIR_HOME/.git-completion.bash
 
-# Switch the shell to zsh and symlink the .zshrc
-chsh -s $(which zsh)
-ln -s $DIR_DOTFILES/config/.zshrc $DIR_HOME
-source $DIR_HOME/.zshrc
-# DEBUG
-cat ~/.zshrc
+pwd
+ls -al
+
+# Switch the shell to bash and symlink the .bashrc
+chsh -s $(which bash)
+ln -s $DIR_DOTFILES/.bashrc $DIR_HOME
+source $DIR_HOME/.bashrc
 
 # Remove the generated .gitconfig, symlink ours and reload it
-rm -rf ~/.gitconfig
-ln -s $DIR_DOTFILES/config/.gitconfig $DIR_HOME
+rm -rf $DIR_HOME/.gitconfig
+ln -s $DIR_DOTFILES/.gitconfig $DIR_HOME
 # DEBUG
-cat ~/.gitconfig
+cat $DIR_HOME/.gitconfig
 
 # Install node LTS
 nvm install --lts
